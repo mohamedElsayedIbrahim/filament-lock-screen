@@ -20,7 +20,7 @@ class LockScreenManager implements LockScreenContract
 
     public function unlock(string $password): bool
     {
-        $user = auth()->user();
+        $user = auth('web')->user();
 
         if (!$user instanceof Authenticatable) {
             return false;
