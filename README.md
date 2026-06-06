@@ -40,7 +40,7 @@ A modern lock screen plugin for **Filament v3** that automatically locks inactiv
 Install the package via Composer:
 
 ```bash
-composer require mohamed/filament-lock-screen
+composer require mohamed-elsayed-ibrahim/filament-lockscreen
 ```
 
 ---
