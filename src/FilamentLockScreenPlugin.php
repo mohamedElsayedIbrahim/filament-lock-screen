@@ -4,8 +4,8 @@ namespace MohamedElsayedIbrahim\FilamentLockScreen;
 
 use Filament\Contracts\Plugin;
 use Filament\Panel;
-use Filament\Facades\FilamentView;
 use Filament\View\PanelsRenderHook;
+use Illuminate\Support\Facades\View;
 
 class FilamentLockScreenPlugin implements Plugin
 {
@@ -25,10 +25,10 @@ class FilamentLockScreenPlugin implements Plugin
     public function boot(Panel $panel): void
     {
         //
-            FilamentView::registerRenderHook(
-            PanelsRenderHook::BODY_END,
-            fn (): string => view('filament-lock-screen::lock-screen')->render(),
-        );
+            $panel->renderHook(
+        PanelsRenderHook::BODY_END,
+        fn () => View::make('filament-lockscreen::lockscreen')->render()
+    );
     }
 
     public static function make(): static
