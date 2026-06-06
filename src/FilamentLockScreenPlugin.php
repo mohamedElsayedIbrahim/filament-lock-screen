@@ -22,6 +22,14 @@ class FilamentLockScreenPlugin implements Plugin
             TrackUserActivity::class,
             ForceLockScreen::class,
         ]);
+
+        $panel->userMenuItems([
+            'lock-screen' => \Filament\Navigation\MenuItem::make()
+                ->label('Lock Screen')
+                ->icon('heroicon-o-lock-closed')
+                ->url(route('filament.lock-screen.lock'))
+                ->sort(100),
+        ]);
     }
 
     public function boot(Panel $panel): void
