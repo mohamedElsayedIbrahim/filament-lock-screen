@@ -27,7 +27,7 @@ class FilamentLockScreenPlugin implements Plugin
             'lock-screen' => \Filament\Navigation\MenuItem::make()
                 ->label('Lock Screen')
                 ->icon('heroicon-o-lock-closed')
-                ->url(route('filament.lock-screen.lock'))
+                ->url('/admin/lock-screen')
                 ->sort(100),
         ]);
     }
