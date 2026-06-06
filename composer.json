@@ -1,5 +1,5 @@
 {
-    "name": "mohamed/filament-lockscreen",
+    "name": "mohamedElsayedIbrahim/filament-lockscreen",
     "description": "A lockscreen plugin for Filament v3 with inactivity timeout and secure unlock functionality.",
     "type": "library",
     "license": "MIT",
