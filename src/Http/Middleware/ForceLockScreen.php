@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class ForceLockScreen
 {
-    public function handle($request, Closure $next)
+    public function handle(Request $request, Closure $next)
 {
     if (!auth('web')->check()) {
         return $next($request);

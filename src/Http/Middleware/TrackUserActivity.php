@@ -7,9 +7,9 @@ use Illuminate\Http\Request;
 
 class TrackUserActivity
 {
-    public function handle($request, Closure $next)
+    public function handle(Request $request, Closure $next)
 {
-    if (auth()->check()) {
+    if (auth('web')->check()) {
         session([
             'fls_last_activity' => now(),
         ]);

@@ -6,6 +6,8 @@ use Filament\Contracts\Plugin;
 use Filament\Panel;
 use Filament\View\PanelsRenderHook;
 use Illuminate\Support\Facades\View;
+use MohamedElsayedIbrahim\FilamentLockscreen\Http\Middleware\ForceLockScreen;
+use MohamedElsayedIbrahim\FilamentLockscreen\Http\Middleware\TrackUserActivity;
 
 class FilamentLockScreenPlugin implements Plugin
 {
@@ -17,8 +19,8 @@ class FilamentLockScreenPlugin implements Plugin
     public function register(Panel $panel): void
     {
         $panel->middleware([
-            \MohamedElsayedIbrahim\FilamentLockScreen\Http\Middleware\TrackUserActivity::class,
-            \MohamedElsayedIbrahim\FilamentLockScreen\Http\Middleware\ForceLockScreen::class,
+            TrackUserActivity::class,
+            ForceLockScreen::class,
         ]);
     }
 
