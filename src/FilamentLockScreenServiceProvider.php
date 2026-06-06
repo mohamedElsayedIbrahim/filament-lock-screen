@@ -21,6 +21,9 @@ class FilamentLockScreenServiceProvider extends ServiceProvider
             'filament-lock-screen'
         );
 
+        $this->loadRoutesFrom(__DIR__ . '/../routes/web.php');
+
+
         $this->publishes([
             __DIR__.'/../config/filament-lock-screen.php' 
                 => config_path('filament-lock-screen.php'),
