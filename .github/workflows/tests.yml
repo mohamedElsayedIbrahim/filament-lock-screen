@@ -15,9 +15,17 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: 8.2
+          extensions: mbstring, dom, fileinfo
+          coverage: none
+
+      - name: Validate composer.json
+        run: composer validate --strict
 
       - name: Install dependencies
-        run: composer install --no-interaction --prefer-dist
+        run: composer install --no-interaction --prefer-dist --no-progress
 
-      - name: Run tests
-        run: vendor/bin/phpunit
+      - name: Create test environment file
+        run: cp .env.example .env || true
+
+      - name: Run PHPUnit
+        run: vendor/bin/phpunit --configuration phpunit.xml
