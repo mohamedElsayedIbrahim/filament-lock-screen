@@ -9,7 +9,7 @@ class ForceLockScreen
 {
     public function handle($request, Closure $next)
 {
-    if (!auth()->check()) {
+    if (!auth('web')->check()) {
         return $next($request);
     }
 

@@ -23,7 +23,7 @@ class LockScreen extends Page
 
     public function unlock(): void
     {
-        $user = auth()->user();
+        $user = auth('web')->user();
 
         if (!Hash::check($this->password, $user->password)) {
             Notification::make()
