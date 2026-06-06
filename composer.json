@@ -1,26 +1,71 @@
 {
-  "name": "mohamed/filament-lockscreen",
-  "description": "Lockscreen system for Filament v3 admin panels",
-  "type": "library",
-  "version": "1.0.0",
-  "license": "MIT",
-  "autoload": {
-    "psr-4": {
-      "Mohamed\\FilamentLockscreen\\": "src/"
-    }
-  },
-  "extra": {
-    "laravel": {
-      "providers": [
-        "Mohamed\\FilamentLockscreen\\LockscreenServiceProvider"
-      ]
-    }
-  },
-  "require": {
-    "php": ">=8.1",
-    "filament/filament": "^3.0",
-    "illuminate/support": "^10.0|^11.0"
-  },
+    "name": "mohamed/filament-lockscreen",
+    "description": "A lockscreen plugin for Filament v3 with inactivity timeout and secure unlock functionality.",
+    "type": "library",
+    "license": "MIT",
+
+    "keywords": [
+        "laravel",
+        "filament",
+        "filamentphp",
+        "filament-plugin",
+        "lockscreen",
+        "security",
+        "session-timeout",
+        "admin-panel"
+    ],
+
+    "homepage": "https://github.com/mohamedElsayedIbrahim/filament-lock-screen",
+
+    "authors": [
+        {
+            "name": "Mohamed Elsayed Ibrahim",
+            "homepage": "https://github.com/mohamedElsayedIbrahim"
+        }
+    ],
+
+    "require": {
+        "php": "^8.1",
+        "filament/filament": "^3.0",
+        "illuminate/routing": "^10.0|^11.0",
+        "illuminate/support": "^10.0|^11.0",
+        "illuminate/view": "^10.0|^11.0",
+        "laravel/framework": "^11.50"
+    },
+
+    "require-dev": {
+        "orchestra/testbench": "^8.0|^9.0",
+        "phpunit/phpunit": "^10.5|^11.0",
+        "laravel/pint": "^1.13"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "Mohamed\\FilamentLockscreen\\": "src/"
+        }
+    },
+
+    "autoload-dev": {
+        "psr-4": {
+            "Mohamed\\FilamentLockscreen\\Tests\\": "tests/"
+        }
+    },
+
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Mohamed\\FilamentLockscreen\\LockscreenServiceProvider"
+            ]
+        }
+    },
+
     "minimum-stability": "stable",
-    "prefer-stable": true
+    "prefer-stable": true,
+
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
 }
