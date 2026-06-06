@@ -4,6 +4,8 @@ namespace Mohamed\FilamentLockScreen;
 
 use Filament\Contracts\Plugin;
 use Filament\Panel;
+use Filament\Facades\FilamentView;
+use Filament\View\PanelsRenderHook;
 
 class FilamentLockScreenPlugin implements Plugin
 {
@@ -14,15 +16,19 @@ class FilamentLockScreenPlugin implements Plugin
 
     public function register(Panel $panel): void
     {
-        $panel
-            ->middleware([
-                \Mohamed\FilamentLockScreen\Http\Middleware\TrackUserActivity::class,
-                \Mohamed\FilamentLockScreen\Http\Middleware\ForceLockScreen::class,
-            ])
-            ->renderHook(
-                'body.end',
-                fn () => view('filament-lock-screen::lock-screen')
-            );
+        $panel->middleware([
+            \Mohamed\FilamentLockScreen\Http\Middleware\TrackUserActivity::class,
+            \Mohamed\FilamentLockScreen\Http\Middleware\ForceLockScreen::class,
+        ]);
+    }
+
+    public function boot(Panel $panel): void
+    {
+        //
+            FilamentView::registerRenderHook(
+            PanelsRenderHook::BODY_END,
+            fn (): string => view('filament-lock-screen::lock-screen')->render(),
+        );
     }
 
     public static function make(): static
