@@ -1,6 +1,6 @@
 <?php
 
-namespace Mohamed\FilamentLockscreen\Events;
+namespace MohamedElsayedIbrahim\FilamentLockscreen\Events;
 
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;

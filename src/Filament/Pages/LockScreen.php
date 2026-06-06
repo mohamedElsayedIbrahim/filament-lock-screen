@@ -1,6 +1,6 @@
 <?php
 
-namespace Mohamed\FilamentLockscreen\Filament\Pages;
+namespace MohamedElsayedIbrahim\FilamentLockscreen\Filament\Pages;
 
 use Filament\Pages\Page;
 use Illuminate\Support\Facades\Hash;

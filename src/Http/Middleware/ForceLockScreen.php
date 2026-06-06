@@ -1,6 +1,6 @@
 <?php
 
-namespace Mohamed\FilamentLockscreen\Http\Middleware;
+namespace MohamedElsayedIbrahim\FilamentLockscreen\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;

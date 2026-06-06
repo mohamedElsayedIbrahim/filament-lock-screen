@@ -1,10 +1,10 @@
 <?php
 
-namespace Mohamed\FilamentLockScreen\Services;
+namespace MohamedElsayedIbrahim\FilamentLockScreen\Services;
 
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Support\Facades\Hash;
-use Mohamed\FilamentLockScreen\Contracts\LockScreenContract;
+use MohamedElsayedIbrahim\FilamentLockScreen\Contracts\LockScreenContract;
 
 class LockScreenManager implements LockScreenContract
 {

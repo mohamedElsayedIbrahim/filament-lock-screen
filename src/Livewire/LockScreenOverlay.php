@@ -1,11 +1,11 @@
 <?php
 
 
-namespace Mohamed\FilamentLockScreen\Livewire;
+namespace MohamedElsayedIbrahim\FilamentLockScreen\Livewire;
 
 use Livewire\Component;
 use Illuminate\Support\Facades\Hash;
-use Mohamed\FilamentLockScreen\Events\Unlocked;
+use MohamedElsayedIbrahim\FilamentLockScreen\Events\Unlocked;
 
 class LockScreenOverlay extends Component
 {

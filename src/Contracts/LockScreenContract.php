@@ -1,6 +1,6 @@
 <?php
 
-namespace Mohamed\FilamentLockScreen\Contracts;
+namespace MohamedElsayedIbrahim\FilamentLockScreen\Contracts;
 
 use Illuminate\Contracts\Auth\Authenticatable;
 

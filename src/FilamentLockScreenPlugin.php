@@ -1,6 +1,6 @@
 <?php
 
-namespace Mohamed\FilamentLockScreen;
+namespace MohamedElsayedIbrahim\FilamentLockScreen;
 
 use Filament\Contracts\Plugin;
 use Filament\Panel;
@@ -17,8 +17,8 @@ class FilamentLockScreenPlugin implements Plugin
     public function register(Panel $panel): void
     {
         $panel->middleware([
-            \Mohamed\FilamentLockScreen\Http\Middleware\TrackUserActivity::class,
-            \Mohamed\FilamentLockScreen\Http\Middleware\ForceLockScreen::class,
+            \MohamedElsayedIbrahim\FilamentLockScreen\Http\Middleware\TrackUserActivity::class,
+            \MohamedElsayedIbrahim\FilamentLockScreen\Http\Middleware\ForceLockScreen::class,
         ]);
     }
 

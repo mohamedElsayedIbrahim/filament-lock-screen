@@ -1,6 +1,6 @@
 <?php
 
-namespace Mohamed\FilamentLockscreen;
+namespace MohamedElsayedIbrahim\FilamentLockscreen;
 
 use Illuminate\Support\ServiceProvider;
 

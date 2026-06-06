@@ -106,7 +106,7 @@ return [
 Inside your Filament Panel Provider:
 
 ```php
-use Mohamed\FilamentLockScreen\FilamentLockScreenPlugin;
+use MohamedElsayedIbrahim\FilamentLockScreen\FilamentLockScreenPlugin;
 
 public function panel(Panel $panel): Panel
 {
@@ -158,7 +158,7 @@ If valid:
 ### Locked Event
 
 ```php
-use Mohamed\FilamentLockScreen\Events\Locked;
+use MohamedElsayedIbrahim\FilamentLockScreen\Events\Locked;
 ```
 
 Example:
@@ -177,7 +177,7 @@ Event::listen(Locked::class, function (Locked $event) {
 ### Unlocked Event
 
 ```php
-use Mohamed\FilamentLockScreen\Events\Unlocked;
+use MohamedElsayedIbrahim\FilamentLockScreen\Events\Unlocked;
 ```
 
 Example:

@@ -34,18 +34,18 @@
     },
     "autoload": {
         "psr-4": {
-            "Mohamed\\FilamentLockscreen\\": "src/"
+            "MohamedElsayedIbrahim\\FilamentLockscreen\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Mohamed\\FilamentLockscreen\\Tests\\": "tests/"
+            "MohamedElsayedIbrahim\\FilamentLockscreen\\Tests\\": "tests/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Mohamed\\FilamentLockscreen\\LockscreenServiceProvider"
+                "MohamedElsayedIbrahim\\FilamentLockscreen\\LockscreenServiceProvider"
             ]
         }
     },
